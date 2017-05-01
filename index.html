@@ -4,9 +4,48 @@
     <title>Ad Video Player</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="http://vjs.zencdn.net/5.19.2/video-js.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-ads/4.2.6/videojs.ads.css" rel="stylesheet">
+    <link href="videojs.ima.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
   </head>
   <body>
-    test
+
+    <div id="splashscreen" class="no-opacity hide">
+      <div id="splashscreen-content">
+        <h1>Preroll Ad Proof of Concept</h1>
+        <button>Enter</button>
+      </div>
+    </div>
+
+    <div id="main" class="no-opacity hide">
+      <div id="main-input">
+        <h6>(Don't forget to turn off AdBlocker!)</h6>
+        <h1>Please upload a mp4 file.</h1>
+        <h2>Or just click <span onclick="playDemo()">HERE</span>.</h2>
+        <form id="upload-form">
+          <label class="custom-file-upload">
+            <input accept="video/mp4" type="file" />
+            UPLOAD MP4
+          </label>
+        </form>
+      </div>
+    </div>
+
+
+    <!--<video id="content_video" class="video-js vjs-default-skin vjs-big-play-centered"
+        controls preload="auto" data-setup="{}">
+      <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4"></source>
+    </video>-->
+
+       
+
+    <script src="http://vjs.zencdn.net/5.19.2/video.js"></script>
+    <script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-ads/4.2.6/videojs.ads.js"></script>
+    <script src="videojs.ima.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
